@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <link href="css/css.css" rel="stylesheet" media="screen">
+    <script>
+
+    </script>
+</head>
+
+<body>
+
+<div data-role="page" id="home">
+
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <h1 class="head">Deric's Pizza That Doesn't Suck</h1>
+
+        <div data-theme="e" data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Find Us</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main" data-role="content">
+
+        <div class="pizzaimg">
+        <img alt="pizza" src="images/pizza1.png"/>
+        </div>
+
+        <a class="btns" href="#menu" data-role="button" data-theme="e">Check Our Menu!</a>
+        <a class="btns" href="#order" data-role="button" data-theme="e">Already Know What You Want?</a>
+        <a class="btns" href="tel:555-555-5555" data-role="button" data-theme="e">Call Us At 555-555-5555</a>
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        Deric Wadleigh Copyright 2013
+    </div>
+
+</div>
+
+<div data-role="page" id="menu">
+
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <h1 class="head">Deric's Pizza That Doesn't Suck</h1>
+
+        <div data-theme="e" data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu" class="ui-btn-active ui-state-persist">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Find Us</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h1> BUILD YOUR PIZZA! </h1>
+
+        <div data-pizza="0" class="product">
+            <span data-name='pizza'>Pizza</span>
+            <span data-price='5'>$5</span>
+        </div>
+
+        <div data-topping="1" class="product">
+            <span data-name='cheese'>Cheese</span>
+            <span data-price='2'>$2 Per Pizza</span>
+        </div>
+
+        <div data-topping="2" class="product">
+            <span data-name='pepperoni'>Pepperoni</span>
+            <span data-price='2'>$2 Per Pizza</span>
+        </div>
+
+        <div data-topping="3" class="product">
+            <span data-name='sausage'>Sausage</span>
+            <span data-price='2'>$2 Per Pizza</span>
+        </div>
+
+        <div data-topping="4" class="product">
+            <span data-name='peppers'>Peppers</span>
+            <span data-price='2'>$2 Per Pizza</span>
+        </div>
+
+        <div data-topping="5" class="product">
+            <span data-name='stuffed-crust'>Stuffed Crust?</span>
+            <span data-price='7'>$7 Per Pizza</span>
+        </div>
+
+        <h1> BREAD STICKS?! </h1>
+
+        <div data-product="6" class="product">
+            <span data-name='bread-sticks'>Bread Sticks</span>
+            <span data-price='6.95'>$6.95</span>
+        </div>
+
+        <h1> SODA?! </h1>
+
+        <div data-product="7" class="product">
+            <span data-name='coke'>Coka-Cola 2 liter</span>
+            <span data-price='3.95'>$3.95</span>
+        </div>
+
+        <div data-product="8" class="product">
+            <span data-name='pepsi'>Pepsi 2 liter</span>
+            <span data-price='3.95'>$3.95</span>
+        </div>
+
+        <div data-product="9" class="product">
+            <span data-name='drpepper'>Dr Pepper 2 liter</span>
+            <span data-price='3.95'>$3.95</span>
+        </div>
+
+        <div class="pizzaDiv">
+            <h1>What kind of Pizza?</h1>
+        </div>
+
+        <div class="orderDiv">
+            <h1>Other products?</h1>
+        </div>
+
+        <div class="totalDiv">
+            <h1>Grand Total!</h1>
+        </div>
+
+        <a href="#order" data-role="button" data-theme="e">Check Complete Order</a>
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        Deric Wadleigh Copyright 2013
+    </div>
+
+</div>
+
+<div data-role="page" id="order">
+
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <h1 class="head">Deric's Pizza That Doesn't Suck</h1>
+
+        <div data-theme="e" data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order" class="ui-btn-active ui-state-persist">Order</a></li>
+                <li><a href="#location">Find Us</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <div class="pizzaDiv">
+            <h1>What kind of pizza?</h1>
+        </div>
+
+        <div class="orderDiv">
+            <h1>Other products?</h1>
+        </div>
+
+        <div class="totalDiv">
+            <h1>Grand Total!</h1>
+        </div>
+
+        <button id="save" data-theme="e">Save Favorite Order</button>
+
+        <button id="load" data-theme="e">Load Favorite Order</button>
+
+        <button id="submit" data-theme="e">Submit Order</button>
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        Deric Wadleigh Copyright 2013
+    </div>
+
+</div>
+
+<div data-role="page" id="location">
+
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <h1 class="head">Deric's Pizza That Doesn't Suck</h1>
+
+        <div data-theme="e" data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location" class="ui-btn-active ui-state-persist">Find Us</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <script>
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                var lat = pos.coords.latitude;
+                var lng = pos.coords.longitude;
+                $("#lat").text(lat);
+                $("#lng").text(lng);
+
+                var map = '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=' + lat + ',' + lng + '&amp;daddr=13222+E+12th+Ave,+Spokane+Valley,+WA&amp;hl=en&amp;aq=2&amp;oq=13222+e+12th+Av&amp;ll=' + lat + ',' + lng + '&amp;spn=0.029091,0.199525&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=' + lat + ',' + lng + '&amp;daddr=13222+E+12th+Ave,+Spokane+Valley,+WA&amp;hl=en&amp;aq=2&amp;oq=13222+e+12th+Av&amp;ll=' + lat + ',' + lng + '&amp;spn=0.029091,0.199525" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
+                $("#directionMap").html(map);
+            })
+        </script>
+
+        <div id="directionMap"></div>
+
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        Deric Wadleigh Copyright 2013
+    </div>
+
+</div>
+
+<div data-role="page" id="aboutus">
+
+    <div data-role="header" data-theme="e" data-position="fixed">
+        <h1 class="head">Deric's Pizza That Doesn't Suck</h1>
+
+        <div data-theme="e" data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Find Us</a></li>
+                <li><a href="#aboutus" class="ui-btn-active ui-state-persist">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <h1>About Deric's Pizza That Doesn't Suck</h1>
+
+        <p id="about">We make pizza that doesn't suck and... <br/> that's about it.</p>
+
+    </div>
+
+    <div data-role="footer" data-theme="e" data-position="fixed">
+        Deric Wadleigh Copyright 2013
+    </div>
+
+</div>
+
+<script>
+    var cart = [];
+    var pizza = [];
+    var toppings = [];
+    var pizzacount = 0;
+
+    function displayCart() {
+        var orderDiv = $('.orderDiv');
+        var pizzaDiv = $('.pizzaDiv');
+        var totalDiv = $('.totalDiv');
+        orderDiv.html("<h1>Other products?</h1>");
+        pizzaDiv.html("<h1>What kind of Pizza?</h1>");
+        totalDiv.html("<h1>Grand Total!</h1>");
+        var grandTotal = 0;
+
+
+        for (var item in cart) {
+            if (cart[item].qty != null) {
+                var qty = cart[item].qty;
+                var price = cart[item].price;
+                var subtotal = qty * price;
+                grandTotal += subtotal;
+                orderDiv.append('<h2>' + qty + ': ' + cart[item].name + ' $' + price.toFixed(2) + ' = $' + subtotal.toFixed(2) + '</h2>');
+            }
+        }
+
+        for (var count in pizza) {
+            if (pizza[count].qty != null) {
+                pizzacount = pizza[count].qty;
+                var price2 = pizza[count].price;
+                var subtotal2 = pizzacount * price2;
+                grandTotal += subtotal2;
+                pizzaDiv.append('<h2>' + pizzacount + ': ' + pizza[count].name + ' $' + price2.toFixed(2) + ' = $' + subtotal2.toFixed(2) + '</h2>');
+            }
+        }
+
+        for (var topping in toppings) {
+            if (toppings[topping] != null) {
+                subtotal3 = pizzacount * toppings[topping].price;
+                grandTotal += subtotal3;
+                pizzaDiv.append('<h2>' + toppings[topping].name + ' $' + subtotal3.toFixed(2) + '</h2>');
+            }
+        }
+        totalDiv.append('<h2>$' + grandTotal.toFixed(2) + '</h2>');
+    }
+
+    $(document).ready(function () {
+
+        $('div[data-pizza]').each(function () {
+            $(this).append('<button class="pizza" data-theme="e" >Add A Pizza</button>')
+        });
+
+        $('div[data-product]').each(function () {
+            $(this).append('<button class="cart" data-theme="e" >Add to Cart</button>')
+        });
+
+        $('div[data-topping]').each(function () {
+            $(this).append('<button class="topping" data-theme="e" >Add/Remove Choice</button>')
+        });
+
+        $('.pizza').on("click", function (event) {
+            var pid = $(this).parent().parent().data("product");
+            if (pizza[pid]) {
+                pizza[pid].qty += 1;
+            } else {
+                pizza[pid] = new Object();
+                pizza[pid].qty = 1;
+                pizza[pid].pid = pid;
+                pizza[pid].name = $(this).parent().siblings("span").data("name");
+                pizza[pid].price = $(this).parent().siblings("span").next().data("price");
+            }
+            displayCart();
+        });
+
+        $('.cart').on("click", function (event) {
+            var pid = $(this).parent().parent().data("product");
+            if (cart[pid]) {
+                cart[pid].qty += 1;
+            } else {
+                cart[pid] = new Object();
+                cart[pid].pid = pid;
+                cart[pid].qty = 1;
+                cart[pid].name = $(this).parent().siblings("span").data("name");
+                cart[pid].price = $(this).parent().siblings("span").next().data("price");
+            }
+            displayCart();
+        });
+
+        $('.topping').on("click", function (event) {
+            var top = $(this).parent().parent().data("topping");
+            if (toppings[top]) {
+                toppings[top] = null;
+                $('#' + top).remove();
+            } else {
+                toppings[top] = new Object();
+                toppings[top].pid = top;
+                toppings[top].name = $(this).parent().siblings("span").data("name");
+                toppings[top].price = $(this).parent().siblings("span").next().data("price");
+                $(this).parent().parent().append('<p id="' + top + '">Check!</p>');
+            }
+            displayCart();
+        });
+
+        $('#save').on("click", function (event) {
+            var cartStr = "[";
+            var toppingStr = "[";
+            var pizzaStr = "[";
+            for( var item in cart ){
+                cartStr += JSON.stringify( cart[item] ) + ",";
+            }
+            for( var topping in toppings ){
+                toppingStr += JSON.stringify( toppings[topping] ) + ",";
+            }
+            for( var count in pizza){
+                pizzaStr += JSON.stringify( pizza[count] ) + ",";
+            }
+            cartStr = cartStr.slice(0,-1);
+            toppingStr = toppingStr.slice(0,-1);
+            pizzaStr = pizzaStr.slice(0,-1);
+            cartStr += "]";
+            toppingStr += "]";
+            pizzaStr += "]";
+            localStorage['cart'] = cartStr;
+            localStorage['topping'] = toppingStr;
+            localStorage['pizza'] = pizzaStr;
+            localStorage['pizzacount'] = pizzacount;
+        });
+
+        $('#load').on("click", function (event) {
+            var cartObj  = JSON.parse( localStorage['cart']);
+            var toppingObj  = JSON.parse( localStorage['topping']);
+            var pizzaObj = JSON.parse( localStorage['pizza']);
+            pizzacount = JSON.parse( localStorage['pizzacount']);
+
+            for( item in cartObj ){
+                console.log(cartObj[item]);
+                pid = cartObj[item].pid;
+                cart[pid] = cartObj[item];
+            }
+
+            for( count in pizzaObj ){
+                console.log(pizzaObj[count]);
+                pid = pizzaObj[count].pid;
+                pizza[pid] = pizzaObj[count];
+            }
+
+            for( topping in toppingObj ){
+                console.log(toppingObj[item]);
+                pid = toppingObj[item].pid;
+                toppings[pid] = toppingObj[item];
+            }
+
+            displayCart();
+        });
+
+        $('#submit').on("click", function (event) {
+            var buyUrl = "";
+            buyUrl += "&pizza=" + pizzacount;
+            for (var topping in toppings) {
+                buyUrl += "&topping[]=" + toppings[topping].name;
+            }
+            for (var item in cart) {
+                buyUrl += "&name[]=" + cart[item].name + "&qty[]=" + cart[item].qty;
+            }
+            window.location = 'email.php?' + buyUrl;
+        });
+
+    })
+</script>
+
+</body>
+</html>

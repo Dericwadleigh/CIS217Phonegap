@@ -1,0 +1,30 @@
+.head {
+    color: red;
+    font-size: 24px;
+}
+
+.main {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+}
+
+.pizzaimg {
+    float: right;
+    position: absolute;
+    left: 50%;
+}
+
+a{color: red;}
+
+.btns{
+    width: 75%;
+}
