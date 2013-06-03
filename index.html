@@ -20,10 +20,10 @@
         <div data-theme="e" data-role="navbar">
             <ul>
                 <li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="#location">Find Us</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#menu" class="vibrate">Menu</a></li>
+                <li><a href="#order" class="vibrate">Order</a></li>
+                <li><a href="#location" class="vibrate">Find Us</a></li>
+                <li><a href="#aboutus" class="vibrate">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -53,11 +53,11 @@
 
         <div data-theme="e" data-role="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="vibrate">Home</a></li>
                 <li><a href="#menu" class="ui-btn-active ui-state-persist">Menu</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="#location">Find Us</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#order" class="vibrate">Order</a></li>
+                <li><a href="#location" class="vibrate">Find Us</a></li>
+                <li><a href="#aboutus" class="vibrate">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -149,11 +149,11 @@
 
         <div data-theme="e" data-role="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
+                <li><a href="#home" class="vibrate">Home</a></li>
+                <li><a href="#menu" class="vibrate">Menu</a></li>
                 <li><a href="#order" class="ui-btn-active ui-state-persist">Order</a></li>
-                <li><a href="#location">Find Us</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#location" class="vibrate">Find Us</a></li>
+                <li><a href="#aboutus" class="vibrate">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -172,11 +172,11 @@
             <h1>Grand Total!</h1>
         </div>
 
-        <button id="save" data-theme="e">Save Favorite Order</button>
+        <button id="save" data-theme="e" class="vibrate">Save Favorite Order</button>
 
-        <button id="load" data-theme="e">Load Favorite Order</button>
+        <button id="load" data-theme="e" class="vibrate">Load Favorite Order</button>
 
-        <button id="submit" data-theme="e">Submit Order</button>
+        <button id="submit" data-theme="e" class="vibrate">Submit Order</button>
 
     </div>
 
@@ -193,11 +193,11 @@
 
         <div data-theme="e" data-role="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#order">Order</a></li>
+                <li><a href="#home" class="vibrate">Home</a></li>
+                <li><a href="#menu" class="vibrate">Menu</a></li>
+                <li><a href="#order" class="vibrate">Order</a></li>
                 <li><a href="#location" class="ui-btn-active ui-state-persist">Find Us</a></li>
-                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#aboutus" class="vibrate">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -234,10 +234,10 @@
 
         <div data-theme="e" data-role="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="#location">Find Us</a></li>
+                <li><a href="#home" class="vibrate">Home</a></li>
+                <li><a href="#menu" class="vibrate">Menu</a></li>
+                <li><a href="#order" class="vibrate">Order</a></li>
+                <li><a href="#location" class="vibrate">Find Us</a></li>
                 <li><a href="#aboutus" class="ui-btn-active ui-state-persist">About Us</a></li>
             </ul>
         </div>
@@ -262,6 +262,25 @@
     var pizza = [];
     var toppings = [];
     var pizzacount = 0;
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {}
+
+    function vibrate() {
+        navigator.notification.vibrate(750);
+		return false;
+    }
+	
+	window.onload = function() {
+        var classes = document.getElementsByClassName('vibrate');
+        for(var i = 0; i < classes.length; i++) {
+            var piece = classes[i];
+            piece.onclick = function() {
+                vibrate();
+            }
+        }
+    };
 
     function displayCart() {
         var orderDiv = $('.orderDiv');
@@ -304,14 +323,6 @@
     }
 
     $(document).ready(function () {
-
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        function onDeviceReady() {}
-
-        function vibrate() {
-            navigator.notification.vibrate(750);
-        }
 
         $('div[data-pizza]').each(function () {
             $(this).append('<button class="pizza" data-theme="e" >Add A Pizza</button>')
