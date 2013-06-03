@@ -7,9 +7,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
     <link href="css/css.css" rel="stylesheet" media="screen">
-    <script>
-
-    </script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
 </head>
 
 <body>
@@ -307,6 +305,14 @@
 
     $(document).ready(function () {
 
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {}
+
+        function vibrate() {
+            navigator.notification.vibrate(750);
+        }
+
         $('div[data-pizza]').each(function () {
             $(this).append('<button class="pizza" data-theme="e" >Add A Pizza</button>')
         });
@@ -331,6 +337,7 @@
                 pizza[pid].price = $(this).parent().siblings("span").next().data("price");
             }
             displayCart();
+            vibrate();
         });
 
         $('.cart').on("click", function (event) {
@@ -345,6 +352,7 @@
                 cart[pid].price = $(this).parent().siblings("span").next().data("price");
             }
             displayCart();
+            vibrate();
         });
 
         $('.topping').on("click", function (event) {
@@ -360,6 +368,7 @@
                 $(this).parent().parent().append('<p id="' + top + '">Check!</p>');
             }
             displayCart();
+            vibrate();
         });
 
         $('#save').on("click", function (event) {
@@ -385,6 +394,7 @@
             localStorage['topping'] = toppingStr;
             localStorage['pizza'] = pizzaStr;
             localStorage['pizzacount'] = pizzacount;
+            vibrate();
         });
 
         $('#load').on("click", function (event) {
@@ -410,8 +420,8 @@
                 pid = toppingObj[item].pid;
                 toppings[pid] = toppingObj[item];
             }
-
             displayCart();
+            vibrate();
         });
 
         $('#submit').on("click", function (event) {
@@ -423,7 +433,8 @@
             for (var item in cart) {
                 buyUrl += "&name[]=" + cart[item].name + "&qty[]=" + cart[item].qty;
             }
-            window.location = 'email.php?' + buyUrl;
+            window.location = 'http://cis217-4.dericwadleigh.name/email.php?' + buyUrl;
+            vibrate();
         });
 
     })
